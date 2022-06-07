@@ -4,11 +4,15 @@ import 'package:hello_world/pages/Tabs.dart';
 import '../tabs.dart';
 import '../pages/Form.dart';
 import '../pages/Search.dart';
+import '../pages/Product.dart';
+import '../pages/ProductInfo.dart';
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
   '/form':(context, {arguments})=>FormPage(),
-  '/search': (context, {arguments})=>SearchPage(arguments: arguments)
+  '/search': (context, {arguments})=>SearchPage(arguments: arguments),
+  '/product': (context, {arguments})=>ProductPage(arguments: arguments),
+  '/productInfo': (context, {arguments})=>ProductInfoPage(arguments: arguments),
 };
 
 // 这里是声明了一个函数

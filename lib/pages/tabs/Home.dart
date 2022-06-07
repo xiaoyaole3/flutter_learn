@@ -37,6 +37,16 @@ class HomePage extends StatelessWidget {
             });
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到商品页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/product', arguments: {
+              "product" : "product"
+            });
+          },
+        ),
       ],
     );
   }
