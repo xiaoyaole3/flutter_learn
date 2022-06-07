@@ -25,7 +25,14 @@ class _CategoryPageState extends State<CategoryPage> {
               )
             );
           },
-        )
+        ),
+        SizedBox(height: 10,),
+        ElevatedButton(
+          child: Text("跳转到表单页面并传值-命名路由"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/form');
+          },
+        ),
       ],
     );
   }
