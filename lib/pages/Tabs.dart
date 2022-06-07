@@ -15,8 +15,8 @@ class _TabsState extends State<Tabs> {
 
   List _pageList = [
     HomePage(),
+    SettingsPage(),
     CategoryPage(),
-    SettingsPage()
   ];
 
   @override
