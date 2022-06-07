@@ -27,6 +27,16 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/search');
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到搜索页面-命名路由-传递参数"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/search', arguments: {
+              "id": 123
+            });
+          },
+        ),
       ],
     );
   }

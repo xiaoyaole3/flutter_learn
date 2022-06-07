@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
+
+  final arguments;
+
+
+  SearchPage({this.arguments});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +13,7 @@ class SearchPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("我是搜索页面"),
       ),
-      body: Text("搜索页面"),
+      body: Text("arguments = ${arguments == null ? null : arguments["id"]}"),
     );
   }
 }
