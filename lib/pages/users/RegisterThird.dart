@@ -21,7 +21,7 @@ class RegisterThird extends StatelessWidget {
 
               // 思路2. 指定跳转到某个页面，并且将路径上的路由信息全部置为null
               Navigator.of(context).pushAndRemoveUntil(
-                new MaterialPageRoute(builder: (context)=>new Tabs()),
+                new MaterialPageRoute(builder: (context)=>new Tabs(index: 1,)),
                 (route) => route == null
               );
             },
