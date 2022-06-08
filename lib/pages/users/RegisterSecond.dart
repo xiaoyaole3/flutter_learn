@@ -14,8 +14,13 @@ class RegisterSecond extends StatelessWidget {
           Text("请输入密码进行注册"),
           SizedBox(height: 10,),
           ElevatedButton(
-            child: Text("确认注册"),
+            child: Text("跳转到第三步"),
             onPressed: () {
+              Navigator.of(context).pushNamed('/registerThird');
+
+
+              // 替换路由
+              // Navigator.of(context).pushReplacementNamed('/registerThird');
 
             },
           )

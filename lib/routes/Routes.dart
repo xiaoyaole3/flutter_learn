@@ -9,6 +9,7 @@ import '../pages/ProductInfo.dart';
 import '../pages/users/Login.dart';
 import '../pages/users/RegisterFirst.dart';
 import '../pages/users/RegisterSecond.dart';
+import '../pages/users/RegisterThird.dart';
 
 
 final routes={
@@ -20,6 +21,7 @@ final routes={
   '/login': (context, {arguments})=>LoginPage(),
   '/registerFirst': (context, {arguments})=>RegisterFirstPage(),
   '/registerSecond': (context, {arguments})=>RegisterSecond(),
+  '/registerThird': (context, {arguments})=>RegisterThird(),
 };
 
 // 这里是声明了一个函数

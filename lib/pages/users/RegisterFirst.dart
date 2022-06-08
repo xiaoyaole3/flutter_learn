@@ -16,9 +16,10 @@ class RegisterFirstPage extends StatelessWidget {
           ElevatedButton(
             child: Text("下一步"),
             onPressed: () {
-              // Navigator.pushNamed(context, '/registerSecond');
+              Navigator.pushNamed(context, '/registerSecond');
+
               // 替换路由，使用第二个页面替换第一个页面，而不是新开一个页面
-              Navigator.of(context).pushReplacementNamed('/registerSecond');
+              // Navigator.of(context).pushReplacementNamed('/registerSecond');
             },
           )
         ],
