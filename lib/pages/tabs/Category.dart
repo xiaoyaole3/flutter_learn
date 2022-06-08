@@ -12,14 +12,25 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("嵌套的appbar"),
-          bottom: TabBar(
-            tabs: [
-              Tab(text: "热销",),
-              Tab(text: "推荐",),
+          backgroundColor: Colors.red,
+
+          title: Row(
+            children: [
+              Expanded(
+                child: TabBar(
+                  indicatorColor: Colors.greenAccent,
+                  labelColor: Colors.yellow,
+                  unselectedLabelColor: Colors.white,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  tabs: [
+                    Tab(text: "热销",),
+                    Tab(text: "推荐",),
+                    Tab(text: "随意",)
+                  ],
+              ),)
             ],
           ),
         ),
@@ -49,7 +60,8 @@ class _CategoryPageState extends State<CategoryPage> {
                   },
                 ),
               ],
-            )
+            ),
+            Text("这个是第三个页面")
           ],
         ),
       ),
