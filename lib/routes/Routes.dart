@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/pages/Tabs.dart';
 
-import '../tabs.dart';
+import '../pages/Tabs.dart';
 import '../pages/Form.dart';
 import '../pages/Search.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
+
+import '../pages/users/Login.dart';
+import '../pages/users/RegisterFirst.dart';
+import '../pages/users/RegisterSecond.dart';
+
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
@@ -13,6 +17,9 @@ final routes={
   '/search': (context, {arguments})=>SearchPage(arguments: arguments),
   '/product': (context, {arguments})=>ProductPage(arguments: arguments),
   '/productInfo': (context, {arguments})=>ProductInfoPage(arguments: arguments),
+  '/login': (context, {arguments})=>LoginPage(),
+  '/registerFirst': (context, {arguments})=>RegisterFirstPage(),
+  '/registerSecond': (context, {arguments})=>RegisterSecond(),
 };
 
 // 这里是声明了一个函数

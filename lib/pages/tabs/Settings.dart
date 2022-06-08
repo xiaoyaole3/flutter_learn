@@ -10,8 +10,22 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("settings"),
+    return Column(
+      children: [
+        ElevatedButton(
+          child: Text("跳转到登陆页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/login');
+          },
+        ),
+        SizedBox(height: 10,),
+        ElevatedButton(
+          child: Text("跳转到注册页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/registerFirst');
+          },
+        )
+      ],
     );
   }
 }
