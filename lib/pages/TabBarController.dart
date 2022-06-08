@@ -16,6 +16,7 @@ class _TabBarControllerPageState extends State<TabBarControllerPage> with Single
 
   @override
   void initState() {
+    super.initState();
     _tabController = new TabController(length: 2, vsync: this);
     _tabController.addListener(() {
       print("tabbar changed, the tabbar index = ${_tabController.index}" );
@@ -26,6 +27,7 @@ class _TabBarControllerPageState extends State<TabBarControllerPage> with Single
   // 生命周期销毁函数
   @override
   void dispose() {
+    super.dispose();
     _tabController.dispose();
   }
 
