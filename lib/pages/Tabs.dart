@@ -55,6 +55,51 @@ class _TabsState extends State<Tabs> {
 
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: DrawerHeader(
+                    child: Text("hello"),
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      image: DecorationImage(
+                        image: NetworkImage("https://s1.ax1x.com/2022/05/12/OBz5jI.jpg"),
+                        fit: BoxFit.cover
+                      )
+                    ),
+                  ),
+                )
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text("首页"),
+            ),
+            Divider(), // 新增一个分割线
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text("设置中心"),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.favorite),
+              ),
+              title: Text("我喜欢的"),
+            ),
+          ],
+        )
+      ),
+      endDrawer: Drawer(
+        child: Text("这个是一个右侧侧边栏"),
+      ),
     );
   }
 }
