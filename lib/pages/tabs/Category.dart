@@ -25,6 +25,7 @@ class _CategoryPageState extends State<CategoryPage> {
                   labelColor: Colors.yellow,
                   unselectedLabelColor: Colors.white,
                   indicatorSize: TabBarIndicatorSize.label,
+                  isScrollable: true,
                   tabs: [
                     Tab(text: "热销",),
                     Tab(text: "推荐",),
