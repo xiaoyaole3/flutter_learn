@@ -13,6 +13,7 @@ import '../pages/users/RegisterThird.dart';
 
 import '../pages/AppBarDemo.dart';
 import '../pages/TabBarHeader.dart';
+import '../pages/TabBarController.dart';
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
@@ -26,6 +27,7 @@ final routes={
   '/registerThird': (context, {arguments})=>RegisterThird(),
   '/appBarDemo': (context, {arguments})=>AppBarDemoPage(),
   '/tabBarHeader': (context, {arguments})=>TabBarHeaderPage(),
+  '/tabBarController': (context, {arguments})=>TabBarControllerPage(),
 };
 
 // 这里是声明了一个函数

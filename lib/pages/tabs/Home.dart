@@ -63,6 +63,14 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/tabBarHeader',);
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到使用TabBarController实现顶部tabBar切换"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/tabBarController',);
+          },
+        ),
       ],
     );
   }
