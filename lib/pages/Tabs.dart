@@ -61,15 +61,28 @@ class _TabsState extends State<Tabs> {
             Row(
               children: [
                 Expanded(
-                  child: DrawerHeader(
-                    child: Text("hello"),
-                    decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      image: DecorationImage(
-                        image: NetworkImage("https://s1.ax1x.com/2022/05/12/OBz5jI.jpg"),
-                        fit: BoxFit.cover
-                      )
+                  // child: DrawerHeader(
+                  //   child: Text("hello"),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.yellow,
+                  //     image: DecorationImage(
+                  //       image: NetworkImage("https://s1.ax1x.com/2022/05/12/OBz5jI.jpg"),
+                  //       fit: BoxFit.cover
+                  //     )
+                  //   ),
+                  // ),
+                  child: UserAccountsDrawerHeader(
+                    accountName: Text("wander"),
+                    accountEmail: Text("xiaoyaole3@163.com"),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage("https://s1.ax1x.com/2022/05/12/OBz5jI.jpg"),
                     ),
+                    decoration: BoxDecoration(
+                      color: Colors.blue
+                    ),
+                    otherAccountsPictures: [
+                      Image.network("https://s1.ax1x.com/2022/05/12/OBzh3d.jpg")
+                    ],
                   ),
                 )
               ],
