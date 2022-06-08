@@ -55,6 +55,14 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/appBarDemo',);
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到顶部切换TabBar"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/tabBarHeader',);
+          },
+        ),
       ],
     );
   }
