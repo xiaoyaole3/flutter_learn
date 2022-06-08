@@ -91,7 +91,11 @@ class _TabsState extends State<Tabs> {
               leading: CircleAvatar(
                 child: Icon(Icons.home),
               ),
-              title: Text("首页"),
+              title: Text("我的空间"),
+              onTap: () {
+                Navigator.of(context).pop(); // 隐藏侧边栏
+                Navigator.pushNamed(context, '/user');
+              },
             ),
             Divider(), // 新增一个分割线
             ListTile(
