@@ -47,6 +47,14 @@ class HomePage extends StatelessWidget {
             });
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到AppBarDemo"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/appBarDemo',);
+          },
+        ),
       ],
     );
   }

@@ -13,6 +13,9 @@ class MyApp extends StatelessWidget {
       // home: Tabs(),
       initialRoute: '/',
       onGenerateRoute: onGenerateRoute,
+
+      // 去掉debug图标
+      debugShowCheckedModeBanner: false,
     );
   }
 }

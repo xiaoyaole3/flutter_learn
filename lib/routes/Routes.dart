@@ -11,6 +11,7 @@ import '../pages/users/RegisterFirst.dart';
 import '../pages/users/RegisterSecond.dart';
 import '../pages/users/RegisterThird.dart';
 
+import '../pages/AppBarDemo.dart';
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
@@ -22,6 +23,7 @@ final routes={
   '/registerFirst': (context, {arguments})=>RegisterFirstPage(),
   '/registerSecond': (context, {arguments})=>RegisterSecond(),
   '/registerThird': (context, {arguments})=>RegisterThird(),
+  '/appBarDemo': (context, {arguments})=>AppBarDemoPage(),
 };
 
 // 这里是声明了一个函数
