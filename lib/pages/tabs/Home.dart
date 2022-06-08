@@ -71,6 +71,14 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/tabBarController',);
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到button页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/button',);
+          },
+        ),
       ],
     );
   }
