@@ -9,6 +9,14 @@ class ButtonPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("button页面"),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add, color: Colors.black, size: 40,),
+        onPressed: () {
+          print("Floating action button pushed");
+        },
+        backgroundColor: Colors.yellow,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
 
@@ -176,8 +184,8 @@ class ButtonPage extends StatelessWidget {
                 print("hello world is pressed");
               },)
             ],
-          )
-
+          ),
+          SizedBox(height: 10,),
         ],
       ),
     );
