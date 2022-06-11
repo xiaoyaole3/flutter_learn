@@ -19,6 +19,8 @@ import '../pages/tabs/User.dart';
 
 import '../pages/Button.dart';
 
+import '../pages/TextField.dart';
+
 final routes={
   '/':(context, {arguments})=>Tabs(),
   '/form':(context, {arguments})=>FormPage(),
@@ -34,6 +36,7 @@ final routes={
   '/tabBarController': (context, {arguments})=>TabBarControllerPage(),
   '/user': (context, {arguments})=>UserPage(),
   '/button': (context, {arguments})=>ButtonPage(),
+  '/textField': (context, {arguments})=>TextFieldPage(),
 };
 
 // 这里是声明了一个函数

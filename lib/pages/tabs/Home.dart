@@ -79,6 +79,14 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/button',);
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到表单页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/textField',);
+          },
+        ),
       ],
     );
   }
