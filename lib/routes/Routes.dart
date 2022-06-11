@@ -20,6 +20,7 @@ import '../pages/tabs/User.dart';
 import '../pages/Button.dart';
 
 import '../pages/TextField.dart';
+import '../pages/CheckBox.dart';
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
@@ -37,6 +38,7 @@ final routes={
   '/user': (context, {arguments})=>UserPage(),
   '/button': (context, {arguments})=>ButtonPage(),
   '/textField': (context, {arguments})=>TextFieldPage(),
+  '/checkBox': (context, {arguments})=>CheckBoxPage(),
 };
 
 // 这里是声明了一个函数
