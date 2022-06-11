@@ -95,6 +95,14 @@ class HomePage extends StatelessWidget {
             Navigator.pushNamed(context, '/checkBox',);
           },
         ),
+        SizedBox(height: 10,),
+        // 命名路由传值
+        ElevatedButton(
+          child: Text("跳转到单选按钮界面"),
+          onPressed: () {
+            Navigator.pushNamed(context, '/radio',);
+          },
+        ),
       ],
     );
   }
