@@ -112,6 +112,14 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/switch',);
             },
           ),
+          SizedBox(height: 10,),
+          // 命名路由传值
+          ElevatedButton(
+            child: Text("TextField、CheckBox、Radio、Switch复合使用"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/userForm',);
+            },
+          ),
         ],
       ),
     );

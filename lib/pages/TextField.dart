@@ -30,7 +30,7 @@ class _TextFieldPageState extends State<TextFieldPage> {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            TextField(
+            TextField( // TextField不可以放在Row组件中
               decoration: InputDecoration(
                 hintText: "请输入用户名"
               ),
