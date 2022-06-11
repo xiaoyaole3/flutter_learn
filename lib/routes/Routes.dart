@@ -22,6 +22,7 @@ import '../pages/Button.dart';
 import '../pages/TextField.dart';
 import '../pages/CheckBox.dart';
 import '../pages/Radio.dart';
+import '../pages/Switch.dart';
 
 final routes={
   '/':(context, {arguments})=>Tabs(),
@@ -41,6 +42,7 @@ final routes={
   '/textField': (context, {arguments})=>TextFieldPage(),
   '/checkBox': (context, {arguments})=>CheckBoxPage(),
   '/radio': (context, {arguments})=>RadioPage(),
+  '/switch': (context, {arguments})=>SwitchPage(),
 };
 
 // 这里是声明了一个函数
