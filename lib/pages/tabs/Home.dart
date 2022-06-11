@@ -120,6 +120,14 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/userForm',);
             },
           ),
+          SizedBox(height: 10,),
+          // 命名路由传值
+          ElevatedButton(
+            child: Text("日期选择组件"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/datePicker',);
+            },
+          ),
         ],
       ),
     );

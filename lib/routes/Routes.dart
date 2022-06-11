@@ -25,6 +25,8 @@ import '../pages/Radio.dart';
 import '../pages/Switch.dart';
 import '../pages/UserForm.dart';
 
+import '../pages/DatePicker.dart';
+
 final routes={
   '/':(context, {arguments})=>Tabs(),
   '/form':(context, {arguments})=>FormPage(),
@@ -45,6 +47,7 @@ final routes={
   '/radio': (context, {arguments})=>RadioPage(),
   '/switch': (context, {arguments})=>SwitchPage(),
   '/userForm': (context, {arguments})=>UserFormPage(),
+  '/datePicker': (context, {arguments})=>DatePickerPage(),
 };
 
 // 这里是声明了一个函数
