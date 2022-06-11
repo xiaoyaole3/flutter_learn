@@ -23,7 +23,7 @@ class _DatePickerPageState extends State<DatePickerPage> {
 
   _showDatePicker() async {
     // 这里的await表示等待异步任务执行完成, 需要配合async就可以
-    var result = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(1980), lastDate: DateTime(2100));
+    var result = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(1980), lastDate: DateTime(2100), locale: Locale('zh'));
     print(result);
 
     setState(() {
