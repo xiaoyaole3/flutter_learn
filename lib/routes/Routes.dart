@@ -27,6 +27,8 @@ import '../pages/UserForm.dart';
 
 import '../pages/DatePicker.dart';
 
+import '../pages/Swiper.dart';
+
 final routes={
   '/':(context, {arguments})=>Tabs(),
   '/form':(context, {arguments})=>FormPage(),
@@ -48,6 +50,7 @@ final routes={
   '/switch': (context, {arguments})=>SwitchPage(),
   '/userForm': (context, {arguments})=>UserFormPage(),
   '/datePicker': (context, {arguments})=>DatePickerPage(),
+  '/swiper': (context, {arguments})=>SwiperPage(),
 };
 
 // 这里是声明了一个函数
