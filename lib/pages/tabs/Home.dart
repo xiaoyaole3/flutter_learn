@@ -136,6 +136,14 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/swiper',);
             },
           ),
+          SizedBox(height: 10,),
+          // 命名路由传值
+          ElevatedButton(
+            child: Text("Dialog组件"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/dialog',);
+            },
+          ),
         ],
       ),
     );
