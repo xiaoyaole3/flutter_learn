@@ -69,8 +69,37 @@ class _DialogPageState extends State<DialogPage> {
     });
   }
 
-  _alertDialog1() async{
-
+  _showModalBottomSheet() async{
+    showModalBottomSheet(context: context, builder: (context) {
+      return Container(
+        height: 200,
+        child: Column(
+          children: [
+            ListTile(
+              title: Text("Choice 1"),
+              onTap: () {
+                print("Choice 1");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text("Choice 2"),
+              onTap: () {
+                print("Choice 2");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text("Choice 3"),
+              onTap: () {
+                print("Choice 3");
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      );
+    });
   }
 
   _alertDialog2() async{
@@ -99,7 +128,7 @@ class _DialogPageState extends State<DialogPage> {
             SizedBox(height: 10,),
             ElevatedButton(
               child: Text("ActionSheet底部弹出框 - showModalBottomSheet"),
-              onPressed: _alertDialog,
+              onPressed: _showModalBottomSheet,
             ),
             SizedBox(height: 10,),
             ElevatedButton(
