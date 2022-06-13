@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+
 
 class MyDialog extends Dialog{
 
@@ -8,8 +10,20 @@ class MyDialog extends Dialog{
 
   MyDialog({this.title, this.content});
 
+
+  _showTimer(context) {
+    var timer;
+    Timer.periodic(Duration(milliseconds: 3000), (timer) {
+      print("定时器完成");
+      Navigator.pop(context);
+      timer.cancel();
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    _showTimer(context);
     return Material(
       type: MaterialType.transparency, // 配置透明
       child: Center(
