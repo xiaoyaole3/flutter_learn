@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:date_format/date_format.dart'; // 第三方格式时间的库
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart'; // 第三方选择日期的库
 
 class DatePickerPage extends StatefulWidget {
   const DatePickerPage({Key? key}) : super(key: key);
@@ -12,6 +13,10 @@ class _DatePickerPageState extends State<DatePickerPage> {
 
   var _nowDate = DateTime.now();
   var _nowTime = TimeOfDay(hour: 12, minute: 20);
+
+  var _nowDateThird = DateTime.now();
+  var _nowTimeThird = TimeOfDay(hour: 12, minute: 20);
+  var _nowDateTimeThird = DateTime.now();
 
 
   // _showDatePicker() {
@@ -39,6 +44,46 @@ class _DatePickerPageState extends State<DatePickerPage> {
       _nowTime = result!;
     });
   }
+
+  _showThirdDatePicker() {
+    DatePicker.showDatePicker(context,
+      showTitleActions: true,
+      minTime: DateTime(2018, 3, 5),
+      maxTime: DateTime(2099, 6, 7),
+      onChanged: (date) {
+        print('change $date');
+      }, onConfirm: (date) {
+        print('confirm $date');
+        setState(() {
+          _nowDateThird=date;
+        });
+      },
+      currentTime: DateTime.now(),
+      locale: LocaleType.zh,
+      theme: DatePickerTheme(
+        backgroundColor: Colors.blue
+      )
+    );
+  }
+
+  _showThirdDateTimePicker() {
+    DatePicker.showDateTimePicker(context,
+      showTitleActions: true,
+      onChanged: (date) {
+        print('change $date in time zone ' +
+            date.timeZoneOffset.inHours.toString());
+      },
+      onConfirm: (date) {
+      print('confirm $date');
+      setState(() {
+        _nowDateTimeThird = date;
+      });
+      },
+      currentTime: DateTime(2008, 12, 31, 23, 12, 34),
+      locale: LocaleType.zh
+    );
+  }
+
 
   @override
   void initState() {
@@ -81,6 +126,38 @@ class _DatePickerPageState extends State<DatePickerPage> {
                     ],
                   ),
                   onTap: _showTimePicker
+              ),
+            ],
+          ),
+          SizedBox(height: 20,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InkWell( // 可以理解为将组件封装为一个可以点击的组件
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("${formatDate(_nowDateThird, [yyyy, '-', mm, '-', dd])}"),
+                      Icon(Icons.arrow_drop_down)
+                    ],
+                  ),
+                  onTap: _showThirdDatePicker
+              ),
+            ],
+          ),
+          SizedBox(height: 20,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InkWell( // 可以理解为将组件封装为一个可以点击的组件
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("${formatDate(_nowDateTimeThird, [yyyy, '-', mm, '-', dd, " ", HH, ":", nn, ":", ss])}"),
+                      Icon(Icons.arrow_drop_down)
+                    ],
+                  ),
+                  onTap: _showThirdDateTimePicker
               ),
             ],
           )
