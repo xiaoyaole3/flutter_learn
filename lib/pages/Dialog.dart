@@ -39,7 +39,34 @@ class _DialogPageState extends State<DialogPage> {
   }
 
   _simpleDialog() async{
-
+    showDialog(context: context, builder: (context){
+      return SimpleDialog(
+        title: Text("选择内容"),
+        children: [
+          SimpleDialogOption(
+            child: Text("Option A"),
+            onPressed: () {
+              print("press option A");
+              Navigator.pop(context);
+            },
+          ),
+          SimpleDialogOption(
+            child: Text("Option B"),
+            onPressed: () {
+              print("press option B");
+              Navigator.pop(context);
+            },
+          ),
+          SimpleDialogOption(
+            child: Text("Option C"),
+            onPressed: () {
+              print("press option C");
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      );
+    });
   }
 
   _alertDialog1() async{
