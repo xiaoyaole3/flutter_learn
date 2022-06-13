@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class DialogPage extends StatefulWidget {
   const DialogPage({Key? key}) : super(key: key);
@@ -102,8 +103,16 @@ class _DialogPageState extends State<DialogPage> {
     });
   }
 
-  _alertDialog2() async{
-
+  _toast(){
+    Fluttertoast.showToast(
+        msg: "提示信息",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
   }
 
 
@@ -133,7 +142,7 @@ class _DialogPageState extends State<DialogPage> {
             SizedBox(height: 10,),
             ElevatedButton(
               child: Text("toast-flutter toast 第三方库"),
-              onPressed: _alertDialog,
+              onPressed: _toast,
             ),
             SizedBox(height: 10,),
           ],
