@@ -144,6 +144,14 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/dialog',);
             },
           ),
+          SizedBox(height: 10,),
+          // 命名路由传值
+          ElevatedButton(
+            child: Text("Http 请求"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/http',);
+            },
+          ),
         ],
       ),
     );
