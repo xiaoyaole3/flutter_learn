@@ -186,6 +186,12 @@ class ButtonPage extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10,),
+          Row(
+            children: [
+              MyFlatButton(),
+            ],
+          ),
+          SizedBox(height: 10,),
         ],
       ),
     );
@@ -215,5 +221,31 @@ class MyButton extends StatelessWidget {
       ),
     );
   }
+}
+
+class MyFlatButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      child: Row(
+        children: [
+          Icon(Icons.favorite, color: Colors.red,),
+          Text("喜欢作者")
+        ],
+      ),
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          )
+        ),
+        backgroundColor: MaterialStateProperty.all(Colors.amberAccent)
+      ),
+      onPressed: () {
+
+      },
+    );
+  }
+
 }
 
