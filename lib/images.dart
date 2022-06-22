@@ -79,7 +79,8 @@ class HomeContent extends StatelessWidget {
                 placeholder: AssetImage("images/a.png"),
                 image: NetworkImage("https://s1.ax1x.com/2022/05/12/OBzf9H.jpg")
               ),
-            )
+            ),
+            // flutter 默认是存在内存缓存的，默认1k张，100m
           ],
         ),
       )
