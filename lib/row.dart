@@ -62,10 +62,14 @@ class HomeContent extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly, // MainAxisAlignment.spaceEvenly 使用的比较多，表示均匀分配
         crossAxisAlignment: CrossAxisAlignment.baseline, // 使用的比较少，表示相对于外边container容器纵向布局。如果使用一般使用最多的是baseline基线对齐
+        mainAxisSize: MainAxisSize.max,
+        textBaseline: TextBaseline.ideographic, // 设置基线对齐时必须指定基线的值，同时，基线是针对与文本而言的
         children: [
           IconContainer(Icons.search, color: Colors.blue,),
           IconContainer(Icons.home, color: Colors.orange,),
           IconContainer(Icons.select_all, color: Colors.red,),
+          Text("Hello World"),
+          Text("Hello, Li Lei")
         ],
       ),
     );
