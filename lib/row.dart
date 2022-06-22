@@ -61,7 +61,7 @@ class HomeContent extends StatelessWidget {
       color: Colors.pink,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly, // MainAxisAlignment.spaceEvenly 使用的比较多，表示均匀分配
-        crossAxisAlignment: CrossAxisAlignment.start, // 使用的比较少，表示相对于外边container容器纵向布局
+        crossAxisAlignment: CrossAxisAlignment.baseline, // 使用的比较少，表示相对于外边container容器纵向布局。如果使用一般使用最多的是baseline基线对齐
         children: [
           IconContainer(Icons.search, color: Colors.blue,),
           IconContainer(Icons.home, color: Colors.orange,),
