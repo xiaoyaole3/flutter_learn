@@ -68,8 +68,8 @@ class HomeContent extends StatelessWidget {
           IconContainer(Icons.search, color: Colors.blue,),
           IconContainer(Icons.home, color: Colors.orange,),
           IconContainer(Icons.select_all, color: Colors.red,),
-          Text("Hello World"),
-          Text("Hello, Li Lei")
+          Text("Hello World", style: TextStyle(fontSize: 20),),
+          Text("Hello, Li Lei", style: TextStyle(fontSize: 30),)
         ],
       ),
     );
