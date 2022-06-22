@@ -33,6 +33,10 @@ class HomeContent extends StatelessWidget {
           padding: EdgeInsets.all(10),
           children: [
             ListTile(
+              // Icon字体图标和图片图标
+              // 1. 字体图标矢量图（放大的时候不会失真）
+              // 2. 字体图标可以设置颜色
+              // 3. 图标很多时，占据空间更小
               leading: Icon(Icons.settings),
               title: Text("上海全面复工、复产、复市"),
               subtitle: Text("6月1日零点零分，上海全市解除区域临时交通管制措施，恢复正常通行。上海全面恢复全市正常生产生活秩序，商超、店铺、交通、写字楼、园区"),
