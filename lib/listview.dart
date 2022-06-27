@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
 
 class HomeContent extends StatelessWidget {
 
+  /// 对于ListView而言，当明确有有限数量个子节点时使用构造函数创建是ok的
+  /// 否则应该使用.build方式进行创建
   Widget _getDefaultListView() {
     return ListView(
       padding: EdgeInsets.all(10),
