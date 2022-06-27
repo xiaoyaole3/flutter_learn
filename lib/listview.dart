@@ -68,11 +68,44 @@ class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: ListView(
-          children: List.generate(20, (index) {
-            return Text("Hello world${index}");
-          }),
-        )
+        child: _generateListViewBySeparated()
+    );
+  }
+
+  ListView _generateListView() {
+    return ListView(
+      itemExtent: 80,
+      children: List.generate(20, (index) {
+        return Text("Hello world${index}");
+      }),
+    );
+  }
+
+  ListView _generateListViewByBuilder() {
+    return ListView.builder(
+      itemCount: 100,
+      itemExtent: 60,
+      itemBuilder: (BuildContext ctx, int index) {
+        return Text("$index showed.");
+      },
+    );
+  }
+
+  ListView _generateListViewBySeparated() {
+    return ListView.separated(
+      itemCount: 100,
+      itemBuilder: (BuildContext ctx, int index) {
+        return Text("$index showed.");
+      },
+      separatorBuilder: (BuildContext ctx, int index) {
+        return Divider(
+          color: Colors.red,
+          height: 30,
+          indent: 10,
+          endIndent: 10,
+          thickness: 8,
+        );
+      }
     );
   }
 
