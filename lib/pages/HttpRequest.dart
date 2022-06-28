@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import '../res/listData.dart';
+import '../components/service/http_request.dart';
 
 class HttpRequestPage extends StatefulWidget {
   const HttpRequestPage({Key? key}) : super(key: key);
@@ -39,6 +40,30 @@ class _HttpRequestPageState extends State<HttpRequestPage> with SingleTickerProv
     _tabController = new TabController(length: 2, vsync: this);
     _tabController.addListener(() {
       // print("tabbar changed, the tabbar index = ${_tabController.index}" );
+    });
+
+
+    // 在实际的应用生产中通常使用dio
+    _useDio();
+  }
+
+  /// 在开发的过程中，如果使用到第三方库，建议对于第三方库都进行一次封装
+  _useDio() {
+    // // 发送网络请求
+    // // 1. 创建dio对象
+    // final dio = Dio();
+    //
+    // // 2. 发送网络请求
+    // dio.get("https://httpbin.org/get").then((value) {
+    //   print(value);
+    // });
+    //
+    // dio.post("https://httpbin.org/post").then((value) {
+    //   print(value);
+    // });
+
+    MyHttpRequest.request("https://httpbin.org/get", params: {"name" : "why"}).then((value) {
+      print(value);
     });
   }
 
