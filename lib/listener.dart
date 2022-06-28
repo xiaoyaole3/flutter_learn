@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -48,6 +49,18 @@ class _ListenerDemoState extends State<ListenerDemo> {
         _isShowFloatingButton = _controller.offset >= 1000;
       });
     });
+
+    testCompute();
+
+  }
+
+  Future<void> testCompute() async {
+    var result = await compute(calc, 100);
+    print("compute result = $result");
+  }
+
+  int calc(int count) {
+    return 100;
   }
 
   @override
