@@ -73,6 +73,9 @@ class _StarRatingState extends State<StarRating> {
     );
     stars.add(partOfStar);
 
+    if (stars.length > widget.count) {
+      return stars.sublist(0, widget.count);
+    }
 
     return stars;
   }
@@ -90,8 +93,8 @@ class RectClipperStar extends CustomClipper<Rect>{
   }
 
   @override
-  bool shouldReclip(covariant CustomClipper oldClipper) {
-    return false;
+  bool shouldReclip(RectClipperStar oldClipper) {
+    return oldClipper.width != width;
   }
 
 }
