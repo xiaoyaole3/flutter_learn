@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './StarRating.dart';
+import './star_rating.dart';
 
 void main() => runApp(MyApp());
 
