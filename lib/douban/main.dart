@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/douban/dashed_line.dart';
 import './star_rating.dart';
 
 void main() => runApp(MyApp());
@@ -24,10 +25,12 @@ class DouBanHomePage extends StatelessWidget {
         title: Text("豆瓣测试"),
       ),
       body: Center(
-        child: StarRating(
-          rating: 8.5,
-          count: 5,
-        ),
+        child: Container(
+          width: 200,
+          child: DashedLine(
+            dashedWidth: 8,
+          ),
+        )
       ),
     );
   }
